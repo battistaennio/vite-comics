@@ -5,6 +5,7 @@
 </script>
 
 <template>
+
     <section id="footer-buy">
 
         <a href="#">
@@ -234,6 +235,32 @@
         </div>
     </section>
 
+    <section id="footer-social">
+        <div class="container">
+            <button>sign-up now!</button>
+
+            <div id="social-container">
+                <h3>follow us</h3>
+                <div class="img-container">
+                    <a href="#">
+                        <img src="/src/assets/footer-facebook.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/src/assets/footer-twitter.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/src/assets/footer-youtube.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/src/assets/footer-pinterest.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="/src/assets/footer-periscope.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </template>
 
@@ -317,6 +344,39 @@ section#footer-list_container{
         #footer-logo{
             width: 450px;
             height: 450px;
+        }
+    }
+}
+
+section#footer-social{
+    height: 100px;
+    background-color: #303030;
+    .container{
+        height: 100%;
+        @include center("between");
+
+        button{
+            text-transform: uppercase;
+            color: white;
+            border-radius: 0;
+            border: 3px solid $primary-color;
+            background: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        #social-container{
+            @include center();
+            h3{
+            text-transform: uppercase;
+            color: $primary-color;
+            margin: 0 10px;
+            }
+
+            img{
+                margin-left: 15px;
+                width: 30px;
+            }
         }
     }
 }

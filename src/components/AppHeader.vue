@@ -71,7 +71,6 @@ header{
                 width: 60px;
                 margin: 15px 0;
             }
-
         }
 
         .nav{
@@ -80,12 +79,11 @@ header{
                 text-transform: uppercase;
                 font-size: 0.6rem;
                 margin: 0 15px;
-                padding-bottom: 30px;
+                padding-bottom: 31px;
                 font-weight: 600;
                 &:hover{
                     border-bottom: 5px solid $primary-color;
                 }
-
             }
         }
     }

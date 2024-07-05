@@ -1,10 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
+
 
   export default{
     name: "App",
     components: {
       AppHeader,
+      AppFooter,
 
     }
   }
@@ -21,7 +24,9 @@ import AppHeader from './components/AppHeader.vue';
 
   </main>
 
-  
+  <AppFooter />
+
+
 </template>
 
 <style lang="scss">
@@ -31,7 +36,7 @@ import AppHeader from './components/AppHeader.vue';
   main{
     background-color: #1c1c1c;
     // debug
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
     align-items: center;
   }

@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <section>
+    <section id="footer-buy">
 
         <a href="#">
             <div class="buy-box">
@@ -63,15 +63,187 @@
         </a>
 
     </section>
+
+    <section id="footer-list_container">
+        <div class="container">
+            <div id="footer-list">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                dc comics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Characters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Comics
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Movies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                TV
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Games
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Videos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                News
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                shop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Shop DC
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Shop DC Collectibles
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            dc
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Characters
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Comics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Movies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            TV
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Games
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Videos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            News
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            TV
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Games
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Videos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            News
+                        </a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            sites
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            DC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            MAD Magazine
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            DC Kids
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            DC Universe
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            DC Power Visa
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="footer-logo">
+                <img src="/src/assets/dc-logo-bg.png" alt="footer logo">
+            </div>
+
+        </div>
+    </section>
+
+
 </template>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
-section{
+section#footer-buy{
     background-color: $primary-color;
-    min-height: 130px;
+    height: 130px;
     @include center();
 
     a{
@@ -99,4 +271,54 @@ section{
         }
     }
 }
+
+section#footer-list_container{
+    height: 300px;
+    background-size: cover;
+    background-image: url("../assets/footer-bg.jpg");
+    overflow-y: hidden;
+
+    .container{
+        height: 100%;
+        @include center("between");
+
+        #footer-list{
+            display: flex;
+            flex-wrap: wrap;
+            flex-shrink: unset;
+            ul{
+                margin: 20px 10px;
+                li{
+                    a{
+                        display: inline-block;
+                        color: gray;
+                        margin-bottom: 2px;
+                        font-size: 0.8rem;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:first-child{
+
+                        a{
+                            color: white;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-size: 1.2rem;
+                            margin-bottom: 7px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer-logo{
+            width: 450px;
+            height: 450px;
+        }
+    }
+}
+
 </style>

@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
+import ListComics from './components/ListComics.vue';
 import AppFooter from './components/AppFooter.vue';
 
   export default{
@@ -8,6 +9,7 @@ import AppFooter from './components/AppFooter.vue';
     components: {
       AppHeader,
       AppJumbotron,
+      ListComics,
       AppFooter,
 
     }
@@ -20,11 +22,7 @@ import AppFooter from './components/AppFooter.vue';
   <AppJumbotron />
 
   <main>
-    <!-- debug -->
-    <div class="container">
-      <h2 style="color: white; ">contenuto di pagina</h2>
-    </div>
-
+    <ListComics />
   </main>
 
   <AppFooter />
@@ -35,13 +33,4 @@ import AppFooter from './components/AppFooter.vue';
 <style lang="scss">
   @use "./styles/general.scss" as *;
   @use "./styles/partials/variables" as *;
-
-  main{
-    background-color: #1c1c1c;
-    // debug
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-  }
-
 </style>

@@ -1,6 +1,5 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppJumbotron from './components/AppJumbotron.vue';
 import ListComics from './components/ListComics.vue';
 import AppFooter from './components/AppFooter.vue';
 
@@ -8,7 +7,6 @@ import AppFooter from './components/AppFooter.vue';
     name: "App",
     components: {
       AppHeader,
-      AppJumbotron,
       ListComics,
       AppFooter,
 
@@ -18,8 +16,6 @@ import AppFooter from './components/AppFooter.vue';
 
 <template>
   <AppHeader />
-
-  <AppJumbotron />
 
   <main>
     <ListComics />

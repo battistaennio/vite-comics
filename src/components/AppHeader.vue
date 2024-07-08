@@ -1,6 +1,11 @@
 <script>
+    import AppJumbotron from './AppJumbotron.vue';
+
     export default{
         name: "AppHeader",
+        components: {
+            AppJumbotron,
+        },
         data(){
             return {
                 links: [
@@ -81,6 +86,9 @@
                 </ul>
             </nav>
         </div>
+
+        <AppJumbotron />
+
     </header>
 </template>
 
@@ -90,8 +98,7 @@
 
 
 header{
-    height: 90px;
-
+    
     nav{
         @include center("between");
 
@@ -110,7 +117,7 @@ header{
                 text-transform: uppercase;
                 font-size: 0.6rem;
                 margin: 0 15px;
-                padding-bottom: 31px;
+                padding-bottom: 34px;
                 font-weight: 600;
                 &:hover{
                     border-bottom: 5px solid $primary-color;

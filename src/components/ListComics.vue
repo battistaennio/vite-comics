@@ -1,10 +1,16 @@
 <script>
     import ComicCard from './ComicCard.vue';
+    import comics from '../assets/dc-comics 2.json'
 
     export default{
         name: "ListComics",
         components: {
             ComicCard,
+        },
+        data() {
+            return{
+                list: comics,
+            }
         }
     }
 </script>

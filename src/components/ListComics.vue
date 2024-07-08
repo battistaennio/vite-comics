@@ -1,6 +1,11 @@
 <script>
+    import ComicCard from './ComicCard.vue';
+
     export default{
         name: "ListComics",
+        components: {
+            ComicCard,
+        }
     }
 </script>
 
@@ -8,6 +13,10 @@
     <section>
         <div class="container">
             <h2>current series</h2>
+
+            <div class="cards-container">
+                <ComicCard />
+            </div>
         </div>
     </section>
 </template>
@@ -20,8 +29,6 @@
         background-color: #1c1c1c;
         padding: 40px 0;
         position: relative;
-        // debug
-        min-height: 100px;
 
         h2{
             color: white;
@@ -31,6 +38,12 @@
             background-color: $primary-color;
             position: absolute;
             top: -25px;
+        }
+
+        .cards-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
         }
     }
 </style>

@@ -1,13 +1,16 @@
 <script>
     export default{
         name: "ComicCard",
+        props: {details: Object},
     }
 </script>
 
 <template>
     <div class="comic-card">
-        <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="">
-        <h3>titolo</h3>
+        <div class="img-container">
+            <img :src="details.thumb" :alt="details.series">
+        </div>
+        <h3>{{details.series}}</h3>
     </div>
 </template>
 
@@ -16,14 +19,26 @@
 @use "../styles/partials/mixins" as *;
 
 .comic-card{
-    width: calc(100% / 6);
-}
+    width: calc(100% / 6 - 25px);
+    margin: 10px 0;
 
-h3{
+    .img-container{
+        height: 200px;
+
+        img{
+        height: 100%;
+        width: 100%;
+        }
+    }
+
+    h3{
     color: white;
     text-align: center;
     text-transform: uppercase;
-    margin: 10px 0;
+    margin-top: 10px;
+    font-weight: 100;
+    }
+
 }
 
 </style>

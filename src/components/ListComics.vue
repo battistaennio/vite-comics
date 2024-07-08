@@ -1,17 +1,18 @@
 <script>
     import ComicCard from './ComicCard.vue';
-    import comics from '../assets/dc-comics 2.json'
+    import ComicsJson from '../assets/dc-comics 2.json';
 
     export default{
         name: "ListComics",
+        data() {
+            return {
+                comics: ComicsJson,
+            };
+        },
         components: {
             ComicCard,
         },
-        data() {
-            return{
-                list: comics,
-            }
-        }
+
     }
 </script>
 
@@ -21,7 +22,7 @@
             <h2>current series</h2>
 
             <div class="cards-container">
-                <ComicCard />
+                <ComicCard v-for="(comic, i) in comics" :key="i" :details="comic"/>
             </div>
         </div>
     </section>
